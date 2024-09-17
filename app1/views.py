@@ -6,11 +6,11 @@ import re
 
 
 # Task 1
-def my_view(request)
+def my_view(request):
     text = request.GET.get('text', '')
     pattern = re.compile(r'[Rr]b+r')
     matches = pattern.findall(text)
-    return render(request, 'my_template.html', {'matches': matches})
+    return render(request)
 
 #Task 2
 
